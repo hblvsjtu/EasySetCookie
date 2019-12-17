@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "EasySetCookie",
+    "version": "1.0",
+    "description": "做一个方便查看和设置cookie的项目",
+    "icons": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "assets/icon19.png",
+            "38": "assets/icon38.png"
+        },
+        "default_title": "EasySetCookie",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "cookies",
+        "tabs",
+        "storage",
+        "<all_urls>"
+    ],
+    "content_scripts":
+    [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["cookie.js"],
+            "run_at": "document_start"
+        }
+    ]
+}

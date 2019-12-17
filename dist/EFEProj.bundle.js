@@ -1,0 +1,2 @@
+/*! 版权所有，翻版必究 */
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[function(e,n){var t=document.getElementById("cookie");function c(e,n){chrome.tabs.query({active:!0,currentWindow:!0},(function(t){chrome.tabs.sendMessage(t[0].id,e,(function(e){n&&n(e)}))}))}c({cmd:"output",value:""},(function(e){t.value=e})),document.getElementById("confirm").addEventListener("click",(function(){c({cmd:"input",value:t.value},(function(e){}))})),document.getElementById("reset").addEventListener("click",(function(){c({cmd:"reset",value:""},(function(e){}))}))}],[[0,1]]]);
